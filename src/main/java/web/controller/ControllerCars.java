@@ -9,6 +9,13 @@ import service.ServiceCar;
 
 @Controller
 public class ControllerCars {
+	private final ServiceCar garage;
+
+	@Autowired
+	public ControllerCars(ServiceCar garage) {
+		this.garage = garage;
+	}
+
 	@GetMapping(value = "/cars")
 	public String showCars(@RequestParam(value = "count", required = false) Integer count,
 						   ModelMap model) {
