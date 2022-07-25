@@ -9,11 +9,11 @@ import service.ServiceCar;
 
 @Controller
 public class ControllerCars {
-	private final ServiceCar garage;
+	private final ServiceCar serviceCar;
 
 	@Autowired
-	public ControllerCars(ServiceCar garage) {
-		this.garage = garage;
+	public ControllerCars(ServiceCar serviceCar) {
+		this.serviceCar = serviceCar;
 	}
 
 	@GetMapping(value = "/cars")
